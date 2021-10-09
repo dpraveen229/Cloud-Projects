@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment</title>
+<script>
+
+function onreturn(){
+var name=document.getElementById("name");
+var email=document.getElementById("email");
+
+if(name.value==""){
+	alert("please enter the name");
+	name.focus();
+	return false
+}
+
+if(email.value==""){
+	alert("enter email id");
+	email.focus();
+	return false;
+}
+
+alert("form validation is successful.");
+return true;
+}
+
+</script>
+</head>
+<body>
+<fieldset>
+<legend><h1 style="color:blue;">Enter your contact Details</h1></legend>
+<form id="form1" onreset="onreturn()">
+<label for="name" style="color:red;">Name:</label>
+<input type="text" name="name" id="name">
+<br><br>
+<label for="email" style="color:red;">E-mail ID:</label>
+<input type="text" name="email" id="email" placeholder="email@gmail.com">
+<br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</fieldset>
+</form>
+</body>
+
+</html>
